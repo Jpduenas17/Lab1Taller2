@@ -22,7 +22,7 @@ class Item(BaseModel):
 
 @app.get("/")
 def read_root():
-    url = 'https://62f6640ba3bce3eed7c04b72.mockapi.io/items'
+    url = 'https://62fc67e61e6a530698a5ee17.mockapi.io/API1Taller2'
     response = requests.get(url, {}, timeout=5)
     return {"items": response.json() }
 
