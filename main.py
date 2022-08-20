@@ -1,19 +1,16 @@
 import requests
 import logging.config
 
-
 from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
 from prometheus_fastapi_instrumentator import Instrumentator 
-
 
 logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 logger = logging.getLogger(__name__) 
 logger.info("fdffffffffffff")
 
 app = FastAPI()
-
 
 @app.get("/")
 def read_root():
