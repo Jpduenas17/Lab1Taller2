@@ -19,7 +19,7 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     response = api1()
-    return {"usuarios": response }
+    return {"InfoUsers": response }
 
 @app.get("/API1Taller2/{idUsuario}")
 def read_user(idUsuario : str):
