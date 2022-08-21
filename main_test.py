@@ -10,5 +10,5 @@ def test_index_route():
     assert response.status_code == 200
 
 def test_index_204():
-    response = client.get('/infoUsers/Pasquale_West92')
+    response = client.get('/infoUsers/Pasquale')
     assert response.status_code == 204
