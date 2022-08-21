@@ -9,7 +9,6 @@ from prometheus_fastapi_instrumentator import Instrumentator
 
 logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 logger = logging.getLogger(__name__) 
-logger.info("fdffffffffffff")
 
 app = FastAPI()
 
@@ -28,11 +27,9 @@ def read_user(idUsuario : str):
     
     return Response(status_code= status.HTTP_204_NO_CONTENT)
      
-
 def api1():
     url='https://62fc67e61e6a530698a5ee17.mockapi.io/API1Taller2'
     response = requests.get(url, {}, timeout=5)
     return response.json()
-
 
 Instrumentator().instrument(app).expose(app)
