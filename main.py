@@ -17,7 +17,7 @@ def read_root():
     response = api1()
     return {"InfoUsers": response }
 
-@app.get("/API1Taller2/{idUsuario}")
+@app.get("/infoUsers/{idUsuario}")
 def read_user(idUsuario : str):
     list=api1()
     for usr in list:
